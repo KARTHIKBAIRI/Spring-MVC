@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/payments/add}" method="post" th:object="${payment}">
+		<input type="text" placeholder="enter payment method" th:field="*{paymethod}"> 
+		<input type="text" placeholder="enter payment address" th:field="*{payaddress}"> 
+		<input type="number" placeholder="enter payment pin" th:field="*{paypin}"> 
+		<input type="text" placeholder="enter payment status" th:field="*{status}">
+		<input type="submit">		
+	</form>
+</body>
+</html>
